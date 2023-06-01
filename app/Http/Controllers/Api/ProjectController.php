@@ -19,11 +19,16 @@ class ProjectController extends Controller
 
     public function show($post_slug){
         $project = Project::where('post_slug',$post_slug)->with(['type','technologies'])->first();
-
-        return response()->json([
-            'success' => true,
-            'project' => $project
-        ]);
+        if($project){
+            return response()->json([
+                'success' => true,
+                'project' => $project
+            ]);
+        }else{
+            return response()->json([
+                'success' => false
+            ]);
+        }
     }
 
 }
