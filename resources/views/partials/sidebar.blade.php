@@ -11,6 +11,12 @@
           Dashboard
         </a>
       </li>
+      <li>
+        <a href="{{ route('admin.emails.index') }}" class="nav-link text-white @if (Route::currentRouteName()=='admin.dashboard') active @endif">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+          Richieste/Contatti
+        </a>
+      </li>
       <li class="mb-1">
         <i class="fa-light fa-list-tree"></i>
         <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
